@@ -1,4 +1,3 @@
-import React from "react";
 import "./InputBox.css";
 
 const InputBox = ({ tooltipConfig, handleTooltipConfig }) => {
