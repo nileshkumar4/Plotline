@@ -1,0 +1,23 @@
+.App {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.input-box-container {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  background-color: #ffffff;
+}
+
+.phone-simulator-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-color: #ffffff;
+}
