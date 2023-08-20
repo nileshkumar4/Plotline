@@ -3,28 +3,32 @@ import InputBox from "./components/InputBox/InputBox";
 import PhoneSimulator from "./components/PhoneSimulator/PhoneSimulator";
 import "./App.css";
 
+const TOOLTIP_CONFIG = "TOOLTIP_CONFIG";
+
 function App() {
-  const [tooltipConfig, setTooltipConfig] = useState({
-    target: "Button 3",
-    position: "bottom",
-    text: "Tooltip Text!",
-    textSize: "",
-    padding: "",
-    textColor: "",
-    backgroundColor: "",
-    cornerRadius: "",
-    width: "",
-    arrowWidth: 6,
-    arrowHeight: 6,
-    imgSrc: "",
-    imgWidth: "",
-    imgHeight: "",
-  });
+  const [tooltipConfig, setTooltipConfig] = useState(
+    JSON.parse(localStorage.getItem(TOOLTIP_CONFIG)) ?? {
+      target: "Button 3",
+      position: "bottom",
+      text: "Tooltip Text!",
+      textSize: "",
+      padding: "",
+      textColor: "",
+      backgroundColor: "",
+      cornerRadius: "",
+      width: "",
+      arrowWidth: 6,
+      arrowHeight: 6,
+      imgSrc: "",
+      imgWidth: "",
+      imgHeight: "",
+    }
+  );
 
   const handleTooltipConfig = (config) => (event) => {
-    setTooltipConfig((prevConfig) => {
-      return { ...prevConfig, [config]: event.target.value };
-    });
+    const newTooltipConfig = { ...tooltipConfig, [config]: event.target.value };
+    setTooltipConfig(newTooltipConfig);
+    localStorage.setItem(TOOLTIP_CONFIG, JSON.stringify(newTooltipConfig));
   };
 
   return (
