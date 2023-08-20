@@ -84,3 +84,9 @@
   border-width: 6px 0 6px 6px;
   border-color: transparent transparent transparent rgba(0, 0, 0, 0.8);
 }
+
+.tooltip img {
+  width: 180px;
+  display: block;
+  margin: auto;
+}

@@ -14,15 +14,13 @@ const PhoneSimulator = ({ tooltipConfig }) => {
     <div className="phone-container">
       <div className="phone">
         <div className="screen">
-          {classNames.map((className, index) => {
-            return (
-              <div className={className} key={index}>
-                <Tooltip tooltipConfig={tooltipConfig}>
-                  <button>{`Button ${index + 1}`}</button>
-                </Tooltip>
-              </div>
-            );
-          })}
+          {classNames.map((className, index) => (
+            <div className={className} key={index}>
+              <Tooltip tooltipConfig={tooltipConfig}>
+                <button>{`Button ${index + 1}`}</button>
+              </Tooltip>
+            </div>
+          ))}
         </div>
       </div>
     </div>

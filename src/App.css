@@ -1,5 +1,8 @@
 .App {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
   height: 100vh;
   width: 100%;
   background-color: #ffffff;
@@ -9,7 +12,7 @@
   flex: 2;
   display: flex;
   flex-direction: column;
-  padding: 50px;
+  padding: 0 50px;
   background-color: #ffffff;
 }
 
@@ -18,6 +21,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px;
+  padding: 0 50px;
   background-color: #ffffff;
 }

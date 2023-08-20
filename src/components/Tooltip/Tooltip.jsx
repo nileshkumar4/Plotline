@@ -13,6 +13,9 @@ const Tooltip = ({ tooltipConfig, children }) => {
     width,
     arrowWidth,
     arrowHeight,
+    imgSrc,
+    imgWidth,
+    imgHeight,
   } = tooltipConfig;
 
   const getArrowBorderWidth = () => {
@@ -59,6 +62,13 @@ const Tooltip = ({ tooltipConfig, children }) => {
               }}
             />
             {text}
+            {!!imgSrc && (
+              <img
+                src={imgSrc}
+                alt="set by user"
+                style={{ width: imgWidth + "px", height: imgHeight + "px" }}
+              />
+            )}
           </div>
         </>
       )}

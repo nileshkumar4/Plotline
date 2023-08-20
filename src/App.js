@@ -16,6 +16,9 @@ function App() {
     width: "",
     arrowWidth: 6,
     arrowHeight: 6,
+    imgSrc: "",
+    imgWidth: "",
+    imgHeight: "",
   });
 
   const handleTooltipConfig = (config) => (event) => {

@@ -118,6 +118,35 @@ const InputBox = ({ tooltipConfig, handleTooltipConfig }) => {
             />
           </div>
         </div>
+        <div className="input-column">
+          <label htmlFor="img-src">Image Source</label>
+          <input
+            type="text"
+            id="img-src"
+            value={tooltipConfig.imgSrc}
+            onChange={handleTooltipConfig("imgSrc")}
+          />
+        </div>
+        <div className="input-row">
+          <div className="input-column">
+            <label htmlFor="img-width">Image Width</label>
+            <input
+              type="number"
+              id="img-width"
+              value={tooltipConfig.imgWidth}
+              onChange={handleTooltipConfig("imgWidth")}
+            />
+          </div>
+          <div className="input-column">
+            <label htmlFor="img-height">Image Height</label>
+            <input
+              type="number"
+              id="img-height"
+              value={tooltipConfig.imgHeight}
+              onChange={handleTooltipConfig("imgHeight")}
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
